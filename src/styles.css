@@ -5,8 +5,22 @@
 :root{
     background-color: #0c0c0c;
 }
+
+
+.mat-mdc-form-field .mdc-notched-outline::after
+.mat-mdc-form-field .mdc-notched-outline::before {
+    border-color: transparent !important;
+}
 *{
     box-sizing: border-box;
+    border-style: none;
+    border: #0c0c0c;
+
 }
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.remove-relative {
+    position: static !important;
+}

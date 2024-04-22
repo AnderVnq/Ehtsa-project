@@ -1,24 +1,25 @@
-<section class="">
+<section class="mt-4">
     <!-- Layout principal -->
-    <div class="flex mx-3">
-    <!-- Menú lateral -->
-        <div class="bg-gray-800 text-white w-64 flex-shrink-0">
-          <!-- Logo o nombre de la empresa -->
-          <div class="p-4 text-center">
-            <h1 class="text-2xl font-semibold">Mi Empresa</h1>
-          </div>
-          <!-- Enlaces de navegación -->
-          <nav class="px-4">
-            <ul class="space-y-2">
-              <li><a href="#" class="block py-2 px-4">Dashboard</a></li>
-              <li><a routerLink="/dashboard/detalle" class="block py-2 px-4">Conductores</a></li>
-              <!-- Más enlaces de navegación -->
-            </ul>
-          </nav>
-        </div>
-        <div class="w-svw mt-2">
-          <router-outlet></router-outlet> 
-        </div>
-        
+  <div class="flex mx-3">
+    <div class="bg-indigo-500 text-black text-lg w-64 flex-shrink-0 rounded-md">
+      <!-- Logo o nombre de la empresa -->
+      <div class="p-4 text-center">
+        <h1 class="text-2xl font-semibold">Gestiones</h1>
+      </div>
+      <!-- Enlaces de navegación -->
+      <nav class="px-4">
+        <ul class="space-y-3">
+          <li class="cursor-pointer rounded-xl relative flex h-[40px] items-center justify-center overflow-hidden bg-gray-800 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-orange-600 before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-56">
+            <a class="relative z-10">Dashboard</a>
+          </li>
+          <li class="cursor-pointer rounded-xl relative flex h-[40px] items-center justify-center overflow-hidden bg-gray-800 text-white shadow-2xl transition-all before:absolute before:h-0 before:w-0 before:rounded-full before:bg-orange-600 before:duration-500 before:ease-out hover:shadow-orange-600 hover:before:h-56 hover:before:w-56">
+            <a  routerLink="/dashboard/conductores"class="relative z-10">Conductores</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="w-svw h-5/6">
+      <router-outlet></router-outlet> 
+    </div>
   </div>  
 </section>

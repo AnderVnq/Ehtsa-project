@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './component/header/header.component';
-import { CardConductorComponent } from './component/card-conductor/card-conductor.component';
+import { CardConductorComponent } from './component/list-conductor/card-conductor.component';
 import { FooterComponent } from './component/footer/footer.component';
 
 @Component({

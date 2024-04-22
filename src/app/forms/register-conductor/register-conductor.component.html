@@ -1,0 +1,50 @@
+<div class="flex justify-center items-center ">
+    <mat-card class="flex gap-6 p-7 mt-0 remove-relative">
+        <mat-card-header>
+          <mat-card-title>Registro de Conductor</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <form [formGroup]="formGroup" class="grid grid-cols-2 gap-4">
+                <mat-form-field appearance="outline" class="">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput formControlName="nombre">
+                    @if (formGroup.controls.nombre.hasError('required')){
+                        <mat-error>Ingrese su nombre</mat-error>
+                    }
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>apellido</mat-label>
+                    <input matInput type="text" formControlName="apellido">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Dni</mat-label>
+                    <input matInput formControlName="dni">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Licencia</mat-label>
+                    <input matInput formControlName="licencia">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Tipo Licencia</mat-label>
+                    <input matInput formControlName="tipo_licencia">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput formControlName="telefono">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Direccion</mat-label>
+                    <input matInput formControlName="direccion">
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Fecha contratacion</mat-label>
+                    <input matInput formControlName="fecha_contratacion" type="date">
+                </mat-form-field>
+                <div class="col-span-2 flex justify-center">
+                    <button mat-raised-button color="primary" type="button" (click)="click_register()" class="bg-indigo-600 px-6 py-2 rounded-lg mt-3">Registrar</button>
+                </div>
+            </form>
+        </mat-card-content>
+      </mat-card>
+
+</div>

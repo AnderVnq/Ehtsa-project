@@ -1,0 +1,20 @@
+<section class="mx-3 h-svh">
+    @if (data) {
+        <ng-container  >
+            <div>si hay data</div>
+        
+            <div class="h-full">
+                <p>{{data.nombre}}</p>
+                <p>{{data.apellido}}</p>
+                <p>{{data.dni}}</p>
+            </div>
+        </ng-container>
+    }
+    @else {
+        <ng-container>
+            <div class="h-full text-slate-300 items-center justify-center flex ">No hay data</div>
+        </ng-container>
+    }
+
+</section>
+  

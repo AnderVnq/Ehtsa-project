@@ -1,0 +1,77 @@
+
+<div class=" mx-3 h-3/4 mb-14">
+
+  <div class="px-6 py-4 mb-6 bg-slate-950 rounded-lg">
+    <!-- Encabezado del dashboard -->
+    <div class="pb-6">
+      <h1 class="text-3xl font-semibold text-slate-300">Dashboard de Conductores</h1>
+      <p class="mt-2 text-sm text-slate-400">Administra aquí la información de los conductores</p>
+    </div>
+    <!-- Barra de búsqueda y botón para crear conductor -->
+    <div class="flex justify-between items-center mb-2">
+      <div class="w-3/5">
+        <input type="text" class="w-full border rounded-md px-4 py-2" placeholder="Buscar conductores..." [(ngModel)]="filterdata">
+        <button type="button" class="py-2 px-4 text-white hover:bg-blue-600  bg-blue-500 mt-3 font-medium rounded-lg" (click)="applyFilter()">Buscar</button>
+      </div>
+      <div class="mb-12">
+        <a routerLink="/dashboard/conductor" class=" bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded">
+          Crear Nuevo Conductor
+        </a>
+      </div>
+    </div>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="rounded overflow-hidden remove-relative">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="id" class="remove-relative">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="dni"  class="remove-relative">
+      <th mat-header-cell *matHeaderCellDef> Dni </th>
+      <td mat-cell *matCellDef="let element"> {{element.dni}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombre" class="remove-relative">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.nombre}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="licencia" class="remove-relative">
+      <th mat-header-cell *matHeaderCellDef> Licencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.licencia}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="tipo_licencia" class="remove-relative">
+      <th mat-header-cell *matHeaderCellDef> Tipo Licencia </th>
+      <td mat-cell *matCellDef="let element"> {{element.tipo_licencia}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions" class="remove-relative">
+      <th mat-header-cell *matHeaderCellDef> </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button color="primary" (click)="ver_detalle(element)">
+          <mat-icon>visibility</mat-icon>
+        </button>
+        <button mat-icon-button color="warn">
+          <mat-icon>delete</mat-icon>
+        </button>
+        <button mat-icon-button color="accent" (click)="editar_conductor(element)" >
+          <mat-icon>edit</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 15, 20]"
+   showFirstLastButtons class="remove-relative"
+    >
+  </mat-paginator>
+
+</div>
+
+
+  
