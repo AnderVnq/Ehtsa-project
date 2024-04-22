@@ -1,26 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ConductorServService } from '../../services/conductor-serv.service';
 import { ActivatedRoute } from '@angular/router';
+import { AutoServService } from '../../services/auto-serv.service';
+import { AutoInterface } from '../../interfaces/auto-interface';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-card-automovil',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './card-automovil.component.html',
   styles: ``
 })
 export class CardAutomovilComponent {
-  id!:number
-  data:any
 
-  
-  constructor(private dataService:ConductorServService,private route: ActivatedRoute){
-    
-    this.id = parseInt(this.route.snapshot.paramMap.get('id') ?? '');
-    this.data = this.dataService.get_data_id(this.id);
-    console.log(this.data);
-  }
-
+  private readonly _autoService=inject(AutoServService)
+  data?:AutoInterface = this._autoService.data_by_id(1)
   
   
   

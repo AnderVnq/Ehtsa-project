@@ -24,11 +24,14 @@ export const routes: Routes = [
         title:'Gestiones',
         component:DashboardComponent,
         children: [
-            { path: '', redirectTo: 'conductores', pathMatch: 'full' },
-            { path: 'conductores', component: CardConductorComponent},
-            { path: 'detalle/conductor/:id', component: CardAutomovilComponent},
+            { path:'', redirectTo: 'conductores', pathMatch: 'full' },
+            { path:'conductores', component: CardConductorComponent},
+            { path:'detalle/conductor/:id', component: CardAutomovilComponent},
             { path:'conductor',component:RegisterConductorComponent},
-            { path:'conductor/update/:id',component:UpdateConductorComponent}
+            { path:'conductor/update/:id',component:UpdateConductorComponent},
+            { path:'autos',component:CardAutomovilComponent},
+            //{ path:'conductor/update/:id',component:UpdateConductorComponent}, poner los forms de registro y update y detalle
+            //{ path:'conductor/update/:id',component:UpdateConductorComponent} poner los forms de registro y update y detalle
             // Otros componentes específicos de la sección
         ]
     }

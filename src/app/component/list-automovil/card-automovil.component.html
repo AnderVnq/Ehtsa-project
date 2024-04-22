@@ -4,9 +4,12 @@
             <div>si hay data</div>
         
             <div class="h-full">
-                <p>{{data.nombre}}</p>
-                <p>{{data.apellido}}</p>
-                <p>{{data.dni}}</p>
+                <p>{{data.placa}}</p>
+                <p>{{data.conductor.nombre}}</p>
+                <p>{{data.marca}}</p>
+                <p>{{data.modelo}}</p>
+                <p>{{data.date_fabricacion| date:'dd/MM/YY'}}</p>
+                <p>{{'activo'? data.estado===true : "inactivo" }}</p>
             </div>
         </ng-container>
     }
