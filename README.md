@@ -1,27 +1,36 @@
 # AngularEthsa
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.1.
+Este proyecto está generado con [Angular CLI](https://github.com/angular/angular-cli) versión 17.3.1.
 
-## Development server
+## Requisitos del Entorno
+- Node.js y npm: Asegúrate de tener Node.js y npm instalados en tu sistema. Puedes descargarlos e instalarlos desde [aquí](https://nodejs.org/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Pasos para Clonar y Configurar el Proyecto
 
-## Code scaffolding
+1. Clona este repositorio a tu máquina local utilizando el siguiente comando en tu terminal:
+    ```
+    git clone <https://github.com/AnderVnq/Ehtsa-project.git>
+    ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. Navega al directorio del proyecto:
+    ```
+    cd AngularEthsa
+    ```
 
-## Build
+3. Instala las dependencias del proyecto utilizando npm:
+    ```
+    npm install
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Ejecutar el Proyecto Localmente
 
-## Running unit tests
+Una vez que hayas clonado el repositorio y configurado el proyecto, puedes ejecutarlo en tu entorno local:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Ejecuta el siguiente comando en tu terminal:
+    ```
+    ng serve
+    ```
 
-## Running end-to-end tests
+2. Abre tu navegador web y navega a `http://localhost:4200/` para ver la aplicación en funcionamiento.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
